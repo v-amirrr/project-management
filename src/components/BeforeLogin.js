@@ -8,7 +8,7 @@ const BeforeLogin = () => {
         <>
             <div className={styles["hpmepage-beforelogin"]}>
                 <div>
-                    <Link to="/signup">
+                    <Link to="/signup/options">
                         <div>Start</div>
                     </Link>
                 </div>
