@@ -13,8 +13,8 @@ const SignupOptions = () => {
 
     return (
         <>
-            <div className={styles["options"]} onClick={() => navigate("/signup/form")}>
-                <div className={styles["email"]}>
+            <div className={styles["options"]}>
+                <div className={styles["email"]} onClick={() => navigate("/signup/form")}>
                     <span><GrMail /></span>
                     <p>Sign Up With Email</p>
                 </div>
