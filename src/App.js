@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 
-import BeforeLogin from './components/BeforeLogin';
-import Signup from './components/Signup';
-import SignupForm from './components/SignupForm';
-import SignupOptions from './components/SignupOptions';
+import BeforeLogin from './components/homepages/BeforeLogin';
+import Signup from './components/signup/Signup';
+import SignupForm from './components/signup/SignupForm';
+import SignupOptions from './components/signup/SignupOptions';
 
 const App = () => {
     return (
