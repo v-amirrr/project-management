@@ -1,0 +1,57 @@
+.homepage-beforelogin {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: -9;
+    width: 28rem;
+    transition: all .5;
+    -webkit-transition: all .5;
+    -moz-transition: all .5;
+    -ms-transition: all .5;
+    -o-transition: all .5;
+}
+
+.homepage-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.title {
+    margin: 1rem;
+    font-size: 3.5rem;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.start-button {
+    font-family: 'Comfortaa', cursive;
+    white-space: nowarp;
+    letter-spacing: -2px;
+    width: 5rem;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
