@@ -24,6 +24,7 @@
 
 .start-button {
     font-family: 'Comfortaa', cursive;
+    cursor: pointer;
     white-space: nowarp;
     letter-spacing: -2px;
     width: 5rem;
@@ -38,4 +39,5 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    user-select: none;
 }
