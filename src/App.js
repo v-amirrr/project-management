@@ -17,14 +17,16 @@ const App = () => {
         <>
             <AnimatePresence exitBeforeEnter>
 
-                <Routes location={location} key={location.key}>
-                    <Route path='/' element={<BeforeLogin />} />
-                    <Route path='/signup' element={<Signup />}>
-                        <Route path="options" element={<SignupOptions />} />
-                        <Route path="form" element={<SignupForm />} />
-                    </Route>
-                </Routes>
+                    <Routes location={location} key={location.key}>
 
+                        <Route path='/' element={<BeforeLogin />} />
+                        <Route path='/signup' element={<Signup />}>
+                            <Route path="options" element={<SignupOptions />} />
+                            <Route path="form" element={<SignupForm />} />
+                        </Route>
+                        
+                    </Routes>
+                    
             </AnimatePresence>
         </>
     );

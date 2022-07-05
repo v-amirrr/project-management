@@ -7,6 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 import { GrMail } from "react-icons/gr";
 import { ImGithub } from "react-icons/im";
 
+import { motion } from 'framer-motion';
+
 const SignupOptions = () => {
 
     const navigate = useNavigate();
@@ -14,20 +16,20 @@ const SignupOptions = () => {
     return (
         <>
             <div className={styles["options"]}>
-                <div className={styles["email"]} onClick={() => navigate("/signup/form")}>
+                <motion.div onClick={() => navigate("/signup/form")} whileTap={{ scale: 0.9, transition: { duration: 0.00001 } }}> 
                     <span><GrMail /></span>
                     <p>Sign Up With Email</p>
-                </div>
+                </motion.div>
 
-                <div className={styles["google"]}>
+                <motion.div whileTap={{ scale: 0.9, transition: { duration: 0.00001 } }}>
                     <span><FcGoogle /></span>
                     <p>Sign Up With Google</p>
-                </div>
+                </motion.div>
 
-                <div className={styles["github"]}>
+                <motion.div whileTap={{ scale: 0.9, transition: { duration: 0.00001 } }}>
                     <span><ImGithub /></span>
                     <p>Sign Up With GitHub</p>
-                </div>
+                </motion.div>
             </div>            
         </>
     );

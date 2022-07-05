@@ -5,7 +5,6 @@ const SignupForm = () => {
     return (
         <>
             <div className={styles["form"]}>
-                <div className={styles["title"]}>Create An Account</div>
                 <div className={styles["inputs"]}>
                     <div className={styles["input"]}>
                         <input type="text" />

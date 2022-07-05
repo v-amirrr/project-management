@@ -4,24 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    z-index: -9;
-    width: 28rem;
-    transition: all .5;
-    -webkit-transition: all .5;
-    -moz-transition: all .5;
-    -ms-transition: all .5;
-    -o-transition: all .5;
+    background-color: #000000a1;
 }
 
 .homepage-text {
@@ -30,6 +13,7 @@
     align-items: center;
     flex-direction: column;
     padding: 2rem;
+    z-index: 5;
 }
 
 .title {
