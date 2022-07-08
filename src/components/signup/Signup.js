@@ -32,7 +32,7 @@ const Signup = () => {
                     <Outlet />
 
                     <div className={styles["signup-bottom"]}>
-                        <p>Already have an account? <Link to="/login"><div className='link'>Login</div></Link></p>
+                        <div>Already have an account? <Link to="/login"><div className='link'>Login</div></Link></div>
                     </div>
                 </motion.div>
             </div>

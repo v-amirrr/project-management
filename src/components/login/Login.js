@@ -52,7 +52,7 @@ const Login = () => {
 
 
                     <div className={styles["login-bottom"]}>
-                        <p>Don't have an account? <Link to="/signup/options"><div className='link'>Create an Account</div></Link></p>
+                        <div>Don't have an account? <Link to="/signup/options"><div className='link'>Create an Account</div></Link></div>
                     </div>
                 </motion.div>
             </div>

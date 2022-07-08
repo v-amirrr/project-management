@@ -3,29 +3,21 @@ import styles from "./SignupForm.module.css";
 
 import { useSignup } from '../../hooks/useSignup';
 
+import ErrorPopup from '../ErrorPopup';
+
 import { motion } from 'framer-motion';
 
 const SignupForm = () => {
 
-    const { signup, error } = useSignup();
+    const { signup, signupError } = useSignup();
 
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
-    const [errors, setErrors] = useState(error);
 
     const submitHandler = () => {
-        if (username && email && password && passwordConfirmation) {
-            if (password == passwordConfirmation) {
-                setErrors(error);
-                signup(username, email, password, passwordConfirmation);
-            } else {
-                setErrors("The passwords don't match");
-            }
-        } else {
-            setErrors("Please fill all the inputs.");
-        }
+        signup(username, email, password, passwordConfirmation);
     };
 
     return (
@@ -55,6 +47,8 @@ const SignupForm = () => {
 
                 <motion.div className={styles["submit"]} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.7 }} onClick={submitHandler}>Create</motion.div>
             </div>
+
+            <ErrorPopup error={signupError} />
         </>
     );
 };

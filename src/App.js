@@ -17,7 +17,6 @@ const App = () => {
     return (
         <>
             <AnimatePresence exitBeforeEnter>
-
                     <Routes location={location} key={location.key}>
 
                         <Route path='/' element={<BeforeLogin />} />
@@ -28,7 +27,6 @@ const App = () => {
                         <Route path='/login' element={<Login />} />
                         
                     </Routes>
-                    
             </AnimatePresence>
         </>
     );

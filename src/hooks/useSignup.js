@@ -5,19 +5,18 @@ import { auth } from "../firebase/config";
 
 export const useSignup = () => {
 
-    const [error, setError] = useState(null);
+    const [signupError, setSignupError] = useState(null);
 
-    const signup = async (username, email, password) => {
-        setError(null);
-
+    const signup = async (username, email, password, passwordConfirmation) => {
+        setSignupError(null);
+        
         try {
             const user = await createUserWithEmailAndPassword(auth, email, password);
-            console.log(user);
+            setSignupError(null);
         } catch (err) {
-            setError(err.message);
-            console.log(err.message);
+            setSignupError(err.message);
         }
     }
 
-    return { signup, error };
+    return { signup, signupError };
 }
