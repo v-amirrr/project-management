@@ -21,6 +21,7 @@ export const useSignup = () => {
         try {
             const response = await createUserWithEmailAndPassword(auth, email, password);
             dispatch({ type: "LOGIN", payload: response.user });
+            localStorage.setItem("user", JSON.stringify(response.user));
             setSignupError(null);
             navigate("/");
         } catch (err) {

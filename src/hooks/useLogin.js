@@ -21,8 +21,8 @@ export const useLogin = () => {
         try {
             const response = await signInWithEmailAndPassword(auth, email, password);
             dispatch({ type: "LOGIN", payload: response.user });
+            localStorage.setItem("user", JSON.stringify(response.user));
             setLoginpError(null);
-            console.log(response.user);
             navigate("/");
         } catch (err) {
             setLoginpError(err.message);
