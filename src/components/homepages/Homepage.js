@@ -6,11 +6,10 @@ import BeforeLogin from "./BeforeLogin";
 import useAuthContext from "../../hooks/useAuthContext";
 
 const userLocal = JSON.parse(localStorage.getItem('user'));
-console.log(userLocal);
 
 const Homepage = () => {
 
-    const { dispatch } = useAuthContext();
+    const { dispatch, user } = useAuthContext();
 
     useEffect(() => {
         if (userLocal) {
@@ -20,10 +19,11 @@ const Homepage = () => {
         }
     }, []);
 
+
     return (
         <>
             {
-                userLocal
+                !!localStorage.getItem('user')
                 ?
                 <AfterLogin />
                 :
