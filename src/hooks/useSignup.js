@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase/config";
 
 import { useNavigate } from "react-router-dom";
 
 import useAuthContext from "./useAuthContext";
+
+const provider = new GoogleAuthProvider();
 
 export const useSignup = () => {
 
@@ -14,6 +16,7 @@ export const useSignup = () => {
     const { dispatch } = useAuthContext();
 
     const [signupError, setSignupError] = useState(null);
+    const [googleError, setGoogleError] = useState(null);
 
     const signup = async (username, email, password, passwordConfirmation) => {
         setSignupError(null);
@@ -29,5 +32,18 @@ export const useSignup = () => {
         }
     }
 
-    return { signup, signupError };
+
+    const signInWithGoogle = async () => {
+        try {
+            const response = await signInWithPopup(auth, provider);
+            navigate("/");
+            dispatch({ action: "LOGIN", payload: response.user });
+            localStorage.setItem("user", JSON.stringify(response.user));
+        } catch (err) {
+            console.log(err);
+            setGoogleError(err);
+        }
+    }
+
+    return { signup, signupError, signInWithGoogle, googleError };
 }

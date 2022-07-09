@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import ErrorPopup from '../ErrorPopup';
 
 import useSignupWithGoogle from '../../hooks/useSignupWithGoogle';
+import { useSignup } from '../../hooks/useSignup';
 
 import { FcGoogle } from "react-icons/fc";
 import { GrMail } from "react-icons/gr";
@@ -15,7 +16,7 @@ import { motion } from 'framer-motion';
 const SignupOptions = () => {
 
     const navigate = useNavigate();
-    const { googleError, signInWithGoogle } = useSignupWithGoogle();
+    const { googleError, signInWithGoogle } = useSignup();
 
     return (
         <>
