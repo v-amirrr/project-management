@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import styles from "./Login.module.css";
 
-import { Outlet, useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import { MdKeyboardArrowLeft } from "react-icons/md";
+
+import { useLogin } from '../../hooks/useLogin';
+
+import ErrorPopup from '../ErrorPopup';
 
 import { motion } from 'framer-motion';
 
@@ -17,10 +21,14 @@ const Login = () => {
 
     const navigate = useNavigate();
 
+    const { login, loginError } = useLogin();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const login = () => {}
+    const loginHandler = () => {
+        login(email, password);
+    }
 
     return (
         <>
@@ -47,13 +55,15 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <motion.div className={styles["submit"]} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.7 }} onClick={login}>Login</motion.div>
+                        <motion.div className={styles["submit"]} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.7 }} onClick={loginHandler}>Login</motion.div>
                     </div>
 
 
                     <div className={styles["login-bottom"]}>
                         <div>Don't have an account? <Link to="/signup/options"><div className='link'>Create an Account</div></Link></div>
                     </div>
+
+                    <ErrorPopup error={loginError} />
                 </motion.div>
             </div>
         </>

@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .login {
@@ -22,6 +23,7 @@
     -moz-transition: box-shadow .5s;
     -ms-transition: box-shadow .5s;
     -o-transition: box-shadow .5s;
+    position: relative;
 }
 
 .login-top {

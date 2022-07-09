@@ -6,9 +6,9 @@ import { IoClose } from 'react-icons/io5';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const popupVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: -50, scale: 0.9 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, type: "tween" } },
-    exit: { opacity: 0, y: 20, transition: { duration: 0.4, type: "tween" } }
+    exit: { opacity: 0, y: 50, scale: 0.9, transition: { duration: 0.4, type: "tween" } }
 }
 
 const ErrorPopup = ({ error }) => {

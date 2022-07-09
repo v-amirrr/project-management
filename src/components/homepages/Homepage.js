@@ -6,7 +6,9 @@ import BeforeLogin from "./BeforeLogin";
 import useAuthContext from "../../hooks/useAuthContext";
 
 const Homepage = () => {
-    const {user} = useAuthContext();
+
+    const { user } = useAuthContext();
+
     return (
         <>
             {
