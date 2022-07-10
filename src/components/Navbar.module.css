@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: #0000006c;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+}
+
+.navbar:hover {
+    background-color: #000000c9;
+}
+
+.title {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 2.2rem;
+    user-select: none;
+}
+
+.profile {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: .6rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    border: #ffffff37 solid 1px;
+    transition: background-color .4s, border .4s;
+    -webkit-transition: background-color .4s, border .4s;
+    -moz-transition: background-color .4s, border .4s;
+    -ms-transition: background-color .4s, border .4s;
+    -o-transition: background-color .4s, border .4s;
+}
+
+.profile:hover {
+    background-color: #414141;
+    border: #ffffff00 solid 1px;
+
+}
