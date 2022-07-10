@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 import ErrorPopup from '../ErrorPopup';
 
-import useSignupWithGoogle from '../../hooks/useSignupWithGoogle';
 import { useSignup } from '../../hooks/useSignup';
 
 import { FcGoogle } from "react-icons/fc";

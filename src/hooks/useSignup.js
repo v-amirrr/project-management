@@ -26,7 +26,7 @@ export const useSignup = () => {
             dispatch({ type: "LOGIN", payload: response.user });
             localStorage.setItem("user", JSON.stringify(response.user));
             setSignupError(null);
-            navigate("/");
+            navigate("/signup/image");
         } catch (err) {
             setSignupError(err.message);
         }
@@ -36,7 +36,7 @@ export const useSignup = () => {
     const signInWithGoogle = async () => {
         try {
             const response = await signInWithPopup(auth, provider);
-            navigate("/");
+            navigate("/signup/image");
             dispatch({ action: "LOGIN", payload: response.user });
             localStorage.setItem("user", JSON.stringify(response.user));
         } catch (err) {
