@@ -55,7 +55,7 @@ body {
 :any-link {
     text-decoration: none;
     cursor: pointer;
-    color: #00b7ff;
+    color: #fff;
 }
 
 .link {
@@ -97,4 +97,9 @@ body {
 
 .link:hover::after {
     inset: 0 0 0 0;
+}
+
+.active {
+    background-color: #ffffff27 !important;
+    width: 100% !important;
 }

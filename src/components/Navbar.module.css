@@ -11,10 +11,6 @@
     -o-transition: all .4s;
 }
 
-.navbar:hover {
-    background-color: #000000c9;
-}
-
 .title {
     font-family: 'Big Shoulders Stencil Display', cursive;
     font-size: 2.2rem;
