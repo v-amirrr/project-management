@@ -1,1 +1,1 @@
-const shit = null;
+const shit = "ain't null";
